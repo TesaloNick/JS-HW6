@@ -45,8 +45,8 @@ function doPlus(a,b) {
     let c = a - b;
     return Math.abs(c)
 }
-document.write('3 - 5. Положительный результат: ', doPlus(3,5), '.<br>')
-document.write('6 - 1. Положительный результат: ', doPlus(6,1), '.<br>')
+document.write('3 минус 5. Положительный результат: ', doPlus(3,5), '.<br>')
+document.write('6 минус 1. Положительный результат: ', doPlus(6,1), '.<br>')
 
 // Задание 6
 
@@ -58,6 +58,19 @@ document.write('Результат: ', date6Ru, '.<br>')
 
 // Задание 7
 
-document.write('<br>Задание 7. Напишите регулярку.<br>')
+document.write('<br>Задание 7. Напишите регулярку для строки "aa aba abba abbba abca abea".<br>')
 let str7 = 'aa aba abba abbba abca abea'
 document.write('Результат: ', str7.match(/ab+a/g), '.<br>')
+
+// Задание 8
+
+document.write('<br>Задание 8. Напишите функцию строгой проверки ввода номер телефона в международном формате.<br>')
+let phoneNumber = '+375 (44) 7084806';
+function checkPhoneNumber() {
+    if (/^\+\d{1,3} \(\d{1,3}\) \d{7,10}/gi.test(phoneNumber)) {
+        return document.write('Номер правильный<br>')
+    } else {
+        return document.write('Номер неправильный<br>')
+    }
+}
+checkPhoneNumber()
