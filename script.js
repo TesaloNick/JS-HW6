@@ -38,3 +38,14 @@ for (let i=0; i < arr4.length; i++) {
 // sumSqrt = Math.pow(sumCube, 0.5);
 sumSqrt = Math.sqrt(sumCube)
 document.write('Результат: ', sumCube, '.<br>')
+
+// Задание 5
+
+document.write('<br>Задание 5. Модуль.<br>')
+function doPlus(a,b) {
+    let c = a - b;
+    return Math.abs(c)
+}
+document.write('3 - 5. Положительный результат: ', doPlus(3,5), '.<br>')
+document.write('6 - 1. Положительный результат: ', doPlus(6,1), '.<br>')
+
