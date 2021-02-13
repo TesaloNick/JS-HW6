@@ -17,3 +17,9 @@ document.write('Получившаяся строка: ', date2_1, '<br>')
 // Задание 3
 
 document.write('<br>Задание 3. Преобразуйте эту дату в формат 31/12/2025.<br>')
+const str3 = 'Я учу javascript!'
+const strSlice = str3.slice(6, -1)
+const srtSubstr = str3.substr(6, 10)
+const strSubstring = str3.substring(6, 16)
+document.write('Извлекли слово jаvascript 3 способами: ', strSlice, ', ', srtSubstr, ', ', strSubstring, '.<br>')
+
