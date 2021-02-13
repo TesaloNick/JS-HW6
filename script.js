@@ -53,5 +53,11 @@ document.write('6 - 1. Положительный результат: ', doPlus(
 document.write('<br>Задание 6. Дата-время в формате 12:59:59 31.12.2014.<br>')
 let date6 = new Date();
 // let date6Ru = date6.toLocaleString('ru'); //13.02.2021, 21:57:05
-let date6Ru = date6.toLocaleString('ru').replace(/(\w+.\w+.\w+), (\w+:\w+:\w+)/g, '$2 $1')
+let date6Ru = date6.toLocaleString('ru').replace(/(.*), (.*)/g, '$2 $1')
 document.write('Результат: ', date6Ru, '.<br>')
+
+// Задание 7
+
+document.write('<br>Задание 7. Напишите регулярку.<br>')
+let str7 = 'aa aba abba abbba abca abea'
+document.write('Результат: ', str7.match(/ab+a/g), '.<br>')
