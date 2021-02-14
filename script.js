@@ -102,5 +102,4 @@ function shareAdress() {
 shareAdress()
 for (let i=0; i<arrayPartsAdress.length; i++){
     document.write(arrayPartsAdress[i], '.<br>')
-
 }
