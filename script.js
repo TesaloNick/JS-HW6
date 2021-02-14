@@ -87,3 +87,20 @@ function checkEmail() {
     }
 }
 checkEmail()
+
+// Задание 10
+
+document.write('<br>Задание 10. Разбейте ссылку на части.<br>')
+let adress = 'https://tech.onliner.by/2018/04/26/smart-do-200/?utm_source=main_tile&utm_medium=smartdo200#zag3';
+let arrayPartsAdress = [];
+let part;
+function shareAdress() {
+    arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/\/\w+\/\w+\/\w+\/[\w-]+\//gm)), String(adress.match(/\?.*\#/gm)), String(adress.match(/\#.*/gm)))
+
+    // return console.log(arrayPartsAdress); 
+}
+shareAdress()
+for (let i=0; i<arrayPartsAdress.length; i++){
+    document.write(arrayPartsAdress[i], '.<br>')
+
+}
