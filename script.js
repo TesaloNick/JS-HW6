@@ -67,10 +67,23 @@ document.write('Результат: ', str7.match(/ab+a/g), '.<br>')
 document.write('<br>Задание 8. Напишите функцию строгой проверки ввода номер телефона в международном формате.<br>')
 let phoneNumber = '+375 (44) 7084806';
 function checkPhoneNumber() {
-    if (/(^\+375|^80) \((33|44|29)\) (\d{7}|\d{3}(-\d{2}){2})/gi.test(phoneNumber)) {
+    if (/(^\+375|^80)( |)(\(|)(33|44|29)(\)|)( |)(\d{7}|\d{3}(-\d{2}){2})/g.test(phoneNumber)) {
         return document.write('Номер правильный<br>')
     } else {
         return document.write('Номер неправильный<br>')
     }
 }
 checkPhoneNumber()
+
+// Задание 9
+
+document.write('<br>Задание 9. Напишите функцию строгой проверки адреса эл.почты.<br>')
+let email = 'dsdfd@gm_.ai-l.com';
+function checkEmail() {
+    if (/^[a-zA-Z][a-zA-Z0-9]+\@[\w\.\-]+\.\w{2,11}/g.test(email)) {
+        return document.write('Адрес эл.почты правильный<br>')
+    } else {
+        return document.write('Адрес эл.почты неправильный<br>')
+    }
+}
+checkEmail()
