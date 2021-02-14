@@ -67,7 +67,7 @@ document.write('Результат: ', str7.match(/ab+a/g), '.<br>')
 document.write('<br>Задание 8. Напишите функцию строгой проверки ввода номер телефона в международном формате.<br>')
 let phoneNumber = '+375 (44) 7084806';
 function checkPhoneNumber() {
-    if (/^\+\d{1,3} \(\d{1,3}\) \d{7,10}/gi.test(phoneNumber)) {
+    if (/(^\+375|^80) \((33|44|29)\) (\d{7}|\d{3}(-\d{2}){2})/gi.test(phoneNumber)) {
         return document.write('Номер правильный<br>')
     } else {
         return document.write('Номер неправильный<br>')
