@@ -95,8 +95,8 @@ let adress = 'https://tech.onliner.by/2018/04/26/smart-do-200/?utm_source=main_t
 let arrayPartsAdress = [];
 let part;
 function shareAdress() {
-    // arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/\/\w+\/\w+\/\w+\/[\w-]+\//gm)), String(adress.match(/\?.*\#/gm)), String(adress.match(/\#.*/gm)))
-    arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/(?:\w)\/.*(?=\?)/gm)), String(adress.match(/\?.*(?=\#)/gm)), String(adress.match(/\#.*/gm)))
+
+    arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/(?<=\w)\/.*(?=\?)/gm)), String(adress.match(/(?<=\?).*(?=\#)/gm)), String(adress.match(/\#.*/gm)))
 
     return arrayPartsAdress; 
 }
