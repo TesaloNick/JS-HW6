@@ -95,11 +95,12 @@ let adress = 'https://tech.onliner.by/2018/04/26/smart-do-200/?utm_source=main_t
 let arrayPartsAdress = [];
 let part;
 function shareAdress() {
-    arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/\/\w+\/\w+\/\w+\/[\w-]+\//gm)), String(adress.match(/\?.*\#/gm)), String(adress.match(/\#.*/gm)))
+    // arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/\/\w+\/\w+\/\w+\/[\w-]+\//gm)), String(adress.match(/\?.*\#/gm)), String(adress.match(/\#.*/gm)))
+    arrayPartsAdress.push(String(adress.match(/http.+\.\w+/gm)), String(adress.match(/(?:\w)\/.*(?=\?)/gm)), String(adress.match(/\?.*(?=\#)/gm)), String(adress.match(/\#.*/gm)))
 
-    // return console.log(arrayPartsAdress); 
+    return arrayPartsAdress; 
 }
 shareAdress()
 for (let i=0; i<arrayPartsAdress.length; i++){
-    document.write(arrayPartsAdress[i], '.<br>')
+    document.write(arrayPartsAdress[i], '<br>')
 }
